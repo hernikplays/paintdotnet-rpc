@@ -7,17 +7,18 @@ const client = new Client({ transport: "ipc" });
 const start = new Date();
 
 async function update() {
-    const apps = await fp("name", "PaintDotNet");
+    const apps = await fp("name", "paint.net");
     let app;
     for (let i = 0; i < apps.length; i++) {
-        if (["PaintDotNet.exe"].includes(apps[i].name)) {
+        console.log(apps[i].name)
+        if (["paintdotnet.exe"].includes(apps[i].name)) {
             app = apps[i];
         }
     }
 
     let window;
     if (app) window = wi.getByPidSync(app.pid);
-    if (window) window.filename = window.title.split(" -")[0];
+    //if (window) window.filename = window.title.split(" -")[0];
     window.version = window.title.split(" -")[1];
 
     client.setActivity({

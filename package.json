@@ -1,13 +1,17 @@
 {
     "name": "paintdotnet-rpc",
     "author": "FireController#1847",
-    "contributors": ["hernikplays#4673"],
+    "contributors": [
+        "hernikplays#4673"
+    ],
     "description": "Get Rich Presence on Paint.net",
     "version": "1.0.0",
     "dependencies": {
         "@arcsine/win-info": "^0.1.2",
-        "discord-rpc": "^3.0.1",
-        "find-process": "^1.4.1"
+        "discord-rpc": "^3.2.0",
+        "find-process": "^1.4.7"
     },
-    "scripts": {"start":"node src/rpc.js"}
+    "scripts": {
+        "start": "node src/rpc.js"
+    }
 }
